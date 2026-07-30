@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grenal Alvoradense</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    height:100vh;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:
+    radial-gradient(circle at top left,#ff2a2a 0%,#750000 35%,transparent 60%),
+    radial-gradient(circle at bottom right,#006eff 0%,#001f5e 35%,transparent 60%),
+    linear-gradient(135deg,#140000,#030812,#000);
+    position:relative;
+}
+
+/* Partículas */
+body::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background-image:
+        radial-gradient(#ffffff40 1px, transparent 1px),
+        radial-gradient(#ffffff20 1px, transparent 1px);
+    background-size:40px 40px,80px 80px;
+    opacity:.25;
+}
+
+.container{
+    position:relative;
+    z-index:2;
+    text-align:center;
+}
+
+h1{
+    font-size:5rem;
+    font-weight:900;
+    color:#111;
+    text-shadow:
+        0 0 5px #fff,
+        0 0 15px #ff3030;
+    letter-spacing:3px;
+}
+
+h2{
+    color:#ddd;
+    letter-spacing:10px;
+    margin-top:-8px;
+    margin-bottom:60px;
+    font-weight:300;
+}
+
+button{
+    cursor:pointer;
+    border:none;
+    padding:22px 90px;
+    font-size:2rem;
+    font-weight:900;
+    color:#111;
+    border-radius:18px;
+    background:linear-gradient(#ffd84d,#ffb800);
+    box-shadow:
+        0 0 25px rgba(255,200,0,.6),
+        inset 0 2px 0 rgba(255,255,255,.5);
+    transition:.25s;
+}
+
+button:hover{
+    transform:scale(1.08);
+    box-shadow:
+        0 0 45px rgba(255,200,0,.9),
+        inset 0 2px 0 rgba(255,255,255,.5);
+}
+
+button:active{
+    transform:scale(.98);
+}
+
+.footer{
+    margin-top:20px;
+    color:#ddd;
+    opacity:.8;
+    font-size:15px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>GRENAL</h1>
+    <h2>ALVORADENSE</h2>
+
+    <button onclick="instalar()">
+        Instalar
+    </button>
+
+    <div class="footer">
+        Clique para baixar o aplicativo.
+    </div>
+</div>
+
+<script>
+function instalar(){
+    // Troque pelo seu link
+    window.location.href = "https://SEU-LINK-AQUI.com";
+}
+</script>
+
+</body>
+</html>
